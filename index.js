@@ -49,7 +49,7 @@ function copy(copyFlavors){
   return copyFlavors.slice(0, 31);
   
 }
-console.log(copy(originalFlavors));
+console.log('task 1', copy(originalFlavors));
 
 
 
@@ -69,6 +69,9 @@ function is31Flavors(array){
   if (array.length = 31){
     return true;
   }
+  else{
+    return false;
+  }
 }
 console.log(is31Flavors(originalFlavors));
 
@@ -87,7 +90,8 @@ Use the addFlavor function below to do the following:
 
 
 function addFlavor(array, string){
-  return array.unshift(string);
+  array.unshift(string);
+  return array;
 }
 console.log('task 3', addFlavor(originalFlavors, 'Rainbow Sherbert'));
 
@@ -103,9 +107,13 @@ Use the removeLastFlavor function below to do the following:
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
+function removeLastFlavor(array){
  /*your code here*/
+  array.pop();
+  return array;
 }
+console.log('task 4', removeLastFlavor(originalFlavors));
+
 
 
 
@@ -120,9 +128,12 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
+function getFlavorByIndex(array, x){
+  return array[x];
   /*your code here*/
 }
+console.log(getFlavorByIndex('task 5', originalFlavors, 4));
+
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -147,7 +158,7 @@ function removeFlavorByName(array, string){
   }
   return array;
 }
-console.log(removeFlavorByName(originalFlavors, "rocky road"));
+console.log('task 6', removeFlavorByName(originalFlavors, "Rocky Road"));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
